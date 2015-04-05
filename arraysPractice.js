@@ -4,8 +4,9 @@
 var arr = [10,20,30];
 //Create a function named 'first' that is given 'arr' as the argument and  returns the first item the given array.
 
-  //Code Here
-
+  var first = function() {
+   return.unshift();
+ };
 
 //Next problem
 
@@ -15,7 +16,10 @@ var arr = [40,50,60];
 //Create a function named 'last' that is given 'arr' as the argument and returns the last item the given array.
 
 
-  //Code Here
+  var last = function(){
+    var lol = arr.pop();
+    return lol;
+  }
 
 
 //Next Problem
@@ -24,7 +28,11 @@ var arr = [40,50,60];
 var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 //Create a function named 'looper' that is given family as it's only argument, loops through the given array, and alerts every item in the array.
 
-  //Code Here
+ var looper = function(){
+  for(var i = 0; i < family.length; i++) {
+    alert(family[i]);
+  }
+ }
 
 
 //Next problem
@@ -34,7 +42,12 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 var letters = ['A', 'B', 'C', 'D', 'E'];
 //Write a function called reversedLooper that is given letters as it's only argument and loops through the given array backwards alerting every item in the array starting at the end.
 
-  //Code Here
+  var reversedLooper = function(){
+    var rev = letters.reverse();
+     for(var i = 0; i < rev.length; i++){
+      alert(rev[i])
+     }
+  }
 
 
 //Next Problem
@@ -43,8 +56,14 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 var nums = [1,2,3,6,22,98,45,23,22,12];
 //Write a function named evenFinder that is given nums as it's only argument and removes all values that aren't even from the given array.
 
-  //Code Here
-
+  var evenFinder = function(){
+    for(var i = 0; i < nums.length; i++){
+      if((nums[i] %2) !=1){
+        nums.splice(nums[i]);
+        
+      };
+    };
+  };
 
 //Next problem
 
@@ -57,7 +76,21 @@ var odds = []
 
 
 
-  //Code Here
+  
+var evenNumbers = function(nums) {
+    for (var i = 0; i < nums.length; i++) {
+
+        if ((nums[i] % 2) != 1) {
+            evens.push(nums[i]);
+                console.log(evens);
+        }
+        else {
+            odds.push(nums[i]);
+                console.log(odds);
+        }
+    }
+
+};
 
 
 //Next Problem
@@ -68,8 +101,20 @@ var getRandomArbitrary = function() {
 }
 var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
 //Above your given a function that will return a random number between 0 and 30, and an array full or numbers. Your job is to write a function named finder that will get a random number, then loop through the array to see if that random number is in the array. If it is, return true, if it's not, return false
-
-  //Code Here
+var random = getRandomArbitrary();
+var finder = function(match){
+  for(var i = 0; i <= numbers.length; i++){
+  if (random === numbers[i]){
+      return true;
+   }
+   else{
+    return false;
+   }
+      else if (i === numbers.length){
+      return false;
+      };
+  };  
+};
 
 
 //Next problem
@@ -79,7 +124,9 @@ var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
 var str = 'this is my sentence';
 //Write a function called reverse that takes is given str as it's only argument and returns that string after it's been reversed
 
-  //Code Here
+ var reverse = function(){
+    return str.split('').reverse().join('');
+  };
 
 
 //Next Problem
@@ -96,20 +143,34 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   myGroceryList then return the new, updated grocery list.
 */
 
-  //Code Here
+
+var addItem = [];
+
+  var removeItem = function(){
+      for (var i = 0; i < myGroceryList; i++) {
+          return myGroceryList[i].unshift().push(addItem);
+      };
+  };
 
 //removeItem('chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem('Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
 
 
 
-//Next Problem
+var newList = myGroceryList[i].unshift();
+
+var newest = myGroceryList[i].pop('Jerky');
 
 
 
 //Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 
-  //Code Here
+  var marker = function(){
+    for(var i = 0; i < 215; i++){
+      var newarr = [];
+      i.push(newarr);
+    }
+  }
 
 
 
@@ -120,7 +181,12 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 //Write a function called addTen that is given 'numbers' as it's only argument and returns a new
 //array after adding ten to each item in numbers. *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 
-  //Code Here
+var addTen = function(){
+  var newi = numbers.split();
+  for(var i = 0; i < newi.length; i++) {
+    return newi[i] + 10;
+  }
+}
 
 
 
@@ -141,7 +207,14 @@ for(var i = 0; i < num2; i++){
 //Above is some code that adds a random number to both arr1 and arr2.
 //Write a function that is given arr1 and arr2 is it's only arguments. Return the array which is longest.
 
-  //Code Here
+  var hi = function(){
+    if(arr1 > arr2){
+      return arr1;
+    }
+    else if(arr1 < arr2){
+      return arr2;
+    }
+  }
 
 
 /*As a continuation of the previous problem, write another function called 'both'.
@@ -149,4 +222,4 @@ for(var i = 0; i < num2; i++){
   'both' should return a new array full of numbers that are found in both arr1 and arr2.
 */
 
-  //Code Here
+  var arr3 = arr1.concat(arr2);
